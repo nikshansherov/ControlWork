@@ -12,3 +12,27 @@ string[] CreateArray()
     }
     return array;
 }
+
+string[] CreateNewArray(string[] array)
+{
+    int j = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3) j ++;         
+    }
+    string[] newArray = new string[j];
+    j = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            
+            newArray[j] = array[i];
+            j ++;
+        }
+    }
+    return newArray;
+}
+
+string[] array = CreateArray();
+string[] newArray = CreateNewArray(array);
