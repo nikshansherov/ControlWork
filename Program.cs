@@ -26,7 +26,6 @@ string[] CreateNewArray(string[] array)
     {
         if (array[i].Length <= 3)
         {
-            
             newArray[j] = array[i];
             j ++;
         }
@@ -34,5 +33,15 @@ string[] CreateNewArray(string[] array)
     return newArray;
 }
 
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++) Console.Write($"{array[i]}\t");
+    Console.WriteLine();
+}
+
 string[] array = CreateArray();
 string[] newArray = CreateNewArray(array);
+Console.WriteLine("Введенный массив:");
+PrintArray(array);
+Console.WriteLine("Сформированный массив:");
+PrintArray(newArray);
