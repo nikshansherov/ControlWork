@@ -1,5 +1,9 @@
-﻿// 
+﻿// Данная программа принимает массив строк от пользователя,
+// формирует массив из первоначального с длинами строк
+// меньше или равными 3.
+// Выводит оба массива на экран.
 
+// Принимает массив строк с клавиатуры.
 string[] CreateArray()
 {
     Console.Write("Введите длину массива: ");
@@ -13,12 +17,13 @@ string[] CreateArray()
     return array;
 }
 
+// Создает новый массив строк на основе введенного.
 string[] CreateNewArray(string[] array)
 {
     int j = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i].Length <= 3) j ++;         
+        if (array[i].Length <= 3) j++;
     }
     string[] newArray = new string[j];
     j = 0;
@@ -27,12 +32,13 @@ string[] CreateNewArray(string[] array)
         if (array[i].Length <= 3)
         {
             newArray[j] = array[i];
-            j ++;
+            j++;
         }
     }
     return newArray;
 }
 
+// Выводит массив на экран.
 void PrintArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++) Console.Write($"{array[i]}\t");
